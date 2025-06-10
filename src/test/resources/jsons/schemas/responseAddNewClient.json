@@ -1,0 +1,11 @@
+{
+  "address": "String",
+  "archived": true,
+  "currencyCode": "String",
+  "currencyId": "String",
+  "email": "String",
+  "id": "String",
+  "name": "String",
+  "note": "String",
+  "workspaceId": "String"
+}

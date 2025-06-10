@@ -1,0 +1,15 @@
+{
+  "memberships": [
+    {
+      "costRate": {
+        "amount": 100,
+        "since": "2020-01-01T00:00:00Z"
+      },
+      "hourlyRate": {
+        "amount": 100,
+        "since": "2020-01-01T00:00:00Z"
+      },
+      "userId": "610467ef2754e100f4c2bd89"
+    }
+  ]
+}

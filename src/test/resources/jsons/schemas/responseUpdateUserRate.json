@@ -1,0 +1,48 @@
+{
+  "id": "string",
+  "name": "string",
+  "hourlyRate": {
+    "amount": 0,
+    "currency": "string"
+  },
+  "clientId": "string",
+  "workspaceId": "string",
+  "billable": true,
+  "memberships": [
+    {
+      "userId": "string",
+      "hourlyRate": {
+        "amount": 0,
+        "currency": "string"
+      },
+      "costRate": {
+        "amount": 0,
+        "currency": "string"
+      },
+      "targetId": "string",
+      "membershipType": "string",
+      "membershipStatus": "string"
+    }
+  ],
+  "color": "string",
+  "estimate": {
+    "estimate": "string",
+    "type": "string"
+  },
+  "archived": false,
+  "duration": "string",
+  "clientName": "string",
+  "note": "string",
+  "costRate": null,
+  "timeEstimate": {
+    "estimate": "string",
+    "type": "string",
+    "resetOption": null,
+    "active": false,
+    "includeNonBillable": true
+  },
+  "budgetEstimate": null,
+  "estimateReset": null,
+  "template": false,
+  "public": true
+}

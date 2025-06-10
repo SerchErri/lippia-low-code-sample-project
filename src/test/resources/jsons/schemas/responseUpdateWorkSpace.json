@@ -1,0 +1,86 @@
+{
+  "costRate": {
+    "amount": 0,
+    "currency": "string"
+  },
+  "currencies": [
+    {
+      "code": "string",
+      "id": "string",
+      "isDefault": true
+    }
+  ],
+  "featureSubscriptionType": "string",
+  "features": [
+    "string"
+  ],
+  "hourlyRate": {
+    "amount": 0,
+    "currency": "string"
+  },
+  "id": "string",
+  "imageUrl": "string",
+  "memberships": [
+    {
+      "costRate": {
+        "amount": 0,
+        "currency": "string"
+      },
+      "hourlyRate": {
+        "amount": 0,
+        "currency": "string"
+      },
+      "membershipStatus": "string",
+      "membershipType": "string",
+      "targetId": "string",
+      "userId": "string"
+    }
+  ],
+  "name": "string",
+  "subdomain": {
+    "enabled": true,
+    "name": "string"
+  },
+  "workspaceSettings": {
+    "adminOnlyPages": "string",
+    "automaticLock": {
+      "changeDay": "string",
+      "dayOfMonth": 0,
+      "firstDay": "string",
+      "olderThanPeriod": "string",
+      "olderThanValue": 0,
+      "type": "string"
+    },
+    "canSeeTimeSheet": true,
+    "canSeeTracker": true,
+    "currencyFormat": "string",
+    "defaultBillableProjects": true,
+    "durationFormat": "string",
+    "forceDescription": true,
+    "forceProjects": true,
+    "forceTags": true,
+    "forceTasks": true,
+    "isProjectPublicByDefault": true,
+    "lockTimeEntries": "string",
+    "lockTimeZone": "string",
+    "multiFactorEnabled": true,
+    "numberFormat": "string",
+    "onlyAdminsCreateProject": true,
+    "onlyAdminsCreateTag": true,
+    "onlyAdminsCreateTask": true,
+    "onlyAdminsSeeAllTimeEntries": true,
+    "onlyAdminsSeeBillableRates": true,
+    "onlyAdminsSeeDashboard": true,
+    "onlyAdminsSeePublicProjectsEntries": true,
+    "projectFavorites": true,
+    "projectGroupingLabel": "string",
+    "projectPickerSpecialFilter": true,
+    "round": {
+      "minutes": "string",
+      "round": "string"
+    },
+    "timeRoundingInReports": true,
+    "timeTrackingMode": "string",
+    "trackTimeDownToSecond": true
+  }
+}
