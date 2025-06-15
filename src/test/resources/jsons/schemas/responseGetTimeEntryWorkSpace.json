@@ -1,0 +1,218 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "tagIds": {
+      "type": "null"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "billable": {
+      "type": "boolean"
+    },
+    "taskId": {
+      "type": "null"
+    },
+    "projectId": {
+      "type": "string"
+    },
+    "workspaceId": {
+      "type": "string"
+    },
+    "timeInterval": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string"
+        },
+        "end": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "duration"
+      ]
+    },
+    "customFieldValues": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "customFieldId": {
+              "type": "string"
+            },
+            "timeEntryId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "null"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "customFieldId",
+            "timeEntryId",
+            "value",
+            "name",
+            "type"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "customFieldId": {
+              "type": "string"
+            },
+            "timeEntryId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "customFieldId",
+            "timeEntryId",
+            "value",
+            "name",
+            "type"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "customFieldId": {
+              "type": "string"
+            },
+            "timeEntryId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "customFieldId",
+            "timeEntryId",
+            "value",
+            "name",
+            "type"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "customFieldId": {
+              "type": "string"
+            },
+            "timeEntryId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "customFieldId",
+            "timeEntryId",
+            "value",
+            "name",
+            "type"
+          ]
+        }
+      ]
+    },
+    "type": {
+      "type": "string"
+    },
+    "kioskId": {
+      "type": "null"
+    },
+    "hourlyRate": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "integer"
+        },
+        "currency": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount",
+        "currency"
+      ]
+    },
+    "costRate": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "integer"
+        },
+        "currency": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount",
+        "currency"
+      ]
+    },
+    "isLocked": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "description",
+    "tagIds",
+    "userId",
+    "billable",
+    "taskId",
+    "projectId",
+    "workspaceId",
+    "timeInterval",
+    "customFieldValues",
+    "type",
+    "kioskId",
+    "hourlyRate",
+    "costRate",
+    "isLocked"
+  ]
+}

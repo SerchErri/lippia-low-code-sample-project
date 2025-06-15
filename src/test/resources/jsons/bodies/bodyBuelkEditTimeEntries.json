@@ -1,0 +1,15 @@
+{
+  "billable": true,
+  "customFields": [
+    {
+      "customFieldId": "684b96a2a8e4e9311c78d10e",
+      "sourceType": "WORKSPACE",
+      "value": "new value"
+    }
+  ],
+  "description": " ",
+  "end": "2021-01-01T01:00:00Z",
+  "projectId": "684b8c00b3f70670b211d2dd",
+  "start": "2021-01-01T00:00:00Z",
+  "type": "REGULAR"
+}

@@ -2,18 +2,22 @@
 Feature: Workspace management in Clockify
 
   Background:
-    Given base url https://api.clockify.me/api
+    Given base url $(env.base_url_clockify)
 
   @CreateWorkspace #OK
   Scenario: Create Workspace
     And base url https://api.clockify.me/api
     And endpoint /v1/workspaces
-    And header x-api-key = "NzlhNWNjYmEtZjU2NS00ZmM1LWFlNGYtNjk4MDczMDlmMGRl"
+    And header x-api-key = "NmI3MTc4MWUtMmY4NC00NjE5LTgyZTgtYWQzNTdiMWJiMzlh"
     And header Content-Type = "application/json"
-    And set value "workspaceName" of key name in body jsons/bodies/bodyNewWorkspace.json
+    And set value "workspaceName1" of key name in body jsons/bodies/bodyNewWorkspace.json
     When execute method POST
+    * print response
     Then the status code should be 201
-    * define workspaceId = $.id
+    * define workSpaceId = $.id
+
+
+
 
 
   @UpdateWorkspace #OK
@@ -49,7 +53,7 @@ Feature: Workspace management in Clockify
     # *** Para borrar antes hay que archivar el WorkSpace y luego borrar, no se puede archivar desde la API ***
 
 
-  @AddNewProject #OK
+  # @AddNewProject1 #OK
   Scenario: Add a new project
     Given call WorkSpace.feature@CreateWorkspace
     And base url https://api.clockify.me/api
@@ -63,7 +67,7 @@ Feature: Workspace management in Clockify
     And validate schema jsons/schemas/responseNewProject.json
     * define projectId = $.id
 
-  @FindProjectByID #OK
+  #@FindProjectByID1 #OK
   Scenario: Find project by ID
     Given call WorkSpace.feature@CreateWorkspace
     And call WorkSpace.feature@AddNewProject
@@ -74,7 +78,7 @@ Feature: Workspace management in Clockify
     Then the status code should be 200
     And response should be $.id = "{{projectId}}"
 
-  @AddNewProjectNegative #OK
+  #@AddNewProjectNegative1 #OK
   Scenario Outline: Validate required fields for Add New Project
     Given call WorkSpace.feature@AddNewProject
     And endpoint /v1/workspaces/{{workspaceId}}/projects
@@ -92,7 +96,7 @@ Feature: Workspace management in Clockify
       | name      | ""           | 400            | "Se requiere el nombre del proyecto" |
 
 
-  @UpdateProjectUserRate #OK
+  #@UpdateProjectUserRate1 #OK
   Scenario: Update project user cost rate
     Given call WorkSpace.feature@AddNewProject
     And endpoint /v1/workspaces/{{workspaceId}}/projects/{{projectId}}/memberships
@@ -103,7 +107,7 @@ Feature: Workspace management in Clockify
     Then the status code should be 200
     And response should be $.id = "{{projectId}}"
 
-  @MessageNegative #OK
+  #@MessageNegative1 #OK
   Scenario Outline: Validate error 401 y 404
     Given call WorkSpace.feature@AddNewProject
     And endpoint "<endpoint>"
@@ -119,7 +123,7 @@ Feature: Workspace management in Clockify
       | /v1/workspaces/684261e7f6059c750cb5edc9/projects  | INVALID_API_KEY                                  | 401            | "Api key does not exist"                                               |
       | /v1/workspaces/684261e7f6059c750cb5edc9/projectsZ | NzlhNWNjYmEtZjU2NS00ZmM1LWFlNGYtNjk4MDczMDlmMGRl | 404            | "No static resource v1/workspaces/684261e7f6059c750cb5edc9/projectsZ." |
 
-  @MessageNegative400 #OK
+  #@MessageNegative4001 #OK
   Scenario: Validate error 400
     Given call WorkSpace.feature@CreateWorkspace
     And base url https://api.clockify.me/api
@@ -134,7 +138,7 @@ Feature: Workspace management in Clockify
 
 # *** Para borrar antes hay que archivar el Proyecto y luego borrar, no se puede archivar desde la API ***
 
-  @DeleteProject #NO PROBAR
+  #@DeleteProject #NO PROBAR
   Scenario: Delete a project
     Given base url https://api.clockify.me/api
     And endpoint /v1/workspaces/{{workspaceId}}/projects/{{projectId}}

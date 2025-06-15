@@ -1,0 +1,48 @@
+{
+  "id": "string",
+  "description": "string",
+  "tagIds": null,
+  "userId": "string",
+  "billable": true,
+  "taskId": null,
+  "projectId": "string",
+  "timeInterval": {
+    "start": "2021-01-01T01:00:00Z",
+    "end": "2021-01-01T00:00:00Z",
+    "duration": "string"
+  },
+  "workspaceId": "string",
+  "isLocked": false,
+  "customFieldValues": [
+    {
+      "customFieldId": "string",
+      "timeEntryId": "string",
+      "value": 0,
+      "name": "string",
+      "type": "string"
+    },
+    {
+      "customFieldId": "string",
+      "timeEntryId": "string",
+      "value": 0,
+      "name": "string",
+      "type": "string"
+    },
+    {
+      "customFieldId": "string",
+      "timeEntryId": "string",
+      "value": null,
+      "name": "string",
+      "type": "string"
+    },
+    {
+      "customFieldId": "string",
+      "timeEntryId": "string",
+      "value": "string",
+      "name": "string",
+      "type": "string"
+    }
+  ],
+  "type": "string",
+  "kioskId": null
+}
